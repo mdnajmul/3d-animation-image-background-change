@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #00346c;
+}
+
+.parallax-image {
+  position: relative;
+  width: 77%;
+  height: 75vh;
+  overflow: hidden;
+  margin: 30px auto;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  animation: backgroundAnimation 6s infinite ease-in;
+  filter: blur(1px);
+}
+
+#train {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 90px;
+  z-index: -1;
+  animation: trainAnimation 6s infinite ease-in;
+  filter: blur(0.1px);
+}
+
+#trainShadow {
+  position: absolute;
+  width: 110%;
+  height: 50%;
+  top: 320px;
+  z-index: 2;
+  animation: trainShadowAnimation 6s infinite ease-in;
+}
+
+#fence {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 47px;
+  z-index: 1;
+  animation: allAnimation 6s infinite ease-in;
+}
+
+#ground {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50px;
+  animation: allAnimation 6s infinite ease-in;
+}
+
+#couple {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 3;
+  animation: allAnimation 6s infinite ease-in;
+}
+
+#tree {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 3;
+  animation: allAnimation 6s infinite ease-in;
+}
+
+.back-frame {
+  width: 18rem;
+  height: 75vh;
+  background: white;
+  border-radius: 23px;
+  position: fixed;
+  top: 30px;
+  justify-content: space-around;
+  align-items: center;
+}
+.back-frame .back-change {
+  width: 91px;
+  height: 91px;
+  background: wheat;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 23px;
+}
+.back-frame .back-change img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes trainAnimation {
+  from {
+    left: 500%;
+    transform: scale(4);
+  }
+
+  to {
+    left: -500%;
+    transform: scale(7);
+  }
+}
+
+@keyframes trainShadowAnimation {
+  from {
+    left: 500%;
+    transform: scale(4);
+  }
+
+  to {
+    left: -500%;
+    transform: scale(6);
+  }
+}
+
+@keyframes allAnimation {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes backgroundAnimation {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
